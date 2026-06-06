@@ -23,7 +23,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Running the flask app
-        run: python app.py
+        run: |
+          python app.py &
+          sleep 10
+          
 
       - name: Setting up a test case
         run: |
